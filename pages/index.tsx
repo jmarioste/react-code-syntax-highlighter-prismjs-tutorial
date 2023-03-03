@@ -14,80 +14,18 @@ const Component = () => {
   return (
     <div className={styles.container}>
       <main className={styles.main}>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias culpa
-          eos ipsam autem dicta molestiae, perspiciatis deleniti aut possimus
-          iusto amet excepturi cumque placeat, nisi ut dolore quisquam, et
-          numquam?
-        </p>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias culpa
-          eos ipsam autem dicta molestiae, perspiciatis deleniti aut possimus
-          iusto amet excepturi cumque placeat, nisi ut dolore quisquam, et
-          numquam?
-        </p>
-        <SyntaxHighlighter code={code} language="jsx" lineHighlights={[2, 4]} />
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias culpa
-          eos ipsam autem dicta molestiae, perspiciatis deleniti aut possimus
-          iusto amet excepturi cumque placeat, nisi ut dolore quisquam, et
-          numquam?
-        </p>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias culpa
-          eos ipsam autem dicta molestiae, perspiciatis deleniti aut possimus
-          iusto amet excepturi cumque placeat, nisi ut dolore quisquam, et
-          numquam?
-        </p>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias culpa
-          eos ipsam autem dicta molestiae, perspiciatis deleniti aut possimus
-          iusto amet excepturi cumque placeat, nisi ut dolore quisquam, et
-          numquam?
-        </p>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias culpa
-          eos ipsam autem dicta molestiae, perspiciatis deleniti aut possimus
-          iusto amet excepturi cumque placeat, nisi ut dolore quisquam, et
-          numquam?
-        </p>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias culpa
-          eos ipsam autem dicta molestiae, perspiciatis deleniti aut possimus
-          iusto amet excepturi cumque placeat, nisi ut dolore quisquam, et
-          numquam?
-        </p>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias culpa
-          eos ipsam autem dicta molestiae, perspiciatis deleniti aut possimus
-          iusto amet excepturi cumque placeat, nisi ut dolore quisquam, et
-          numquam?
-        </p>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias culpa
-          eos ipsam autem dicta molestiae, perspiciatis deleniti aut possimus
-          iusto amet excepturi cumque placeat, nisi ut dolore quisquam, et
-          numquam?
-        </p>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias culpa
-          eos ipsam autem dicta molestiae, perspiciatis deleniti aut possimus
-          iusto amet excepturi cumque placeat, nisi ut dolore quisquam, et
-          numquam?
-        </p>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias culpa
-          eos ipsam autem dicta molestiae, perspiciatis deleniti aut possimus
-          iusto amet excepturi cumque placeat, nisi ut dolore quisquam, et
-          numquam?
-        </p>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias culpa
-          eos ipsam autem dicta molestiae, perspiciatis deleniti aut possimus
-          iusto amet excepturi cumque placeat, nisi ut dolore quisquam, et
-          numquam?
-        </p>
-        <SyntaxHighlighter code={code} language="jsx" lineHighlights={[2, 4]} />
+        {Array.from(new Array(200).keys()).map((i) => {
+          return (
+            <div key={i}>
+              <p style={{ height: 100 }}>Lorem ipsum</p>
+              <SyntaxHighlighter
+                code={code}
+                language="jsx"
+                lineHighlights={[2, 4]}
+              />
+            </div>
+          );
+        })}
       </main>
     </div>
   );
